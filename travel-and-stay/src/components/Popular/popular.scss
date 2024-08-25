@@ -1,0 +1,138 @@
+:root{
+  --primaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.popular {
+  padding-top: 15rem;
+
+  .secContainer {
+    .secHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .textDiv {
+        .secTitle {
+          color: var(--blackColor);
+          line-height: 1.5rem;
+          padding-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 13px;
+          color: var(--textColor);
+          font-weight: 500;
+        }
+      }
+
+      .iconsDiv {
+        gap: 0.5rem;
+
+        .icon {
+          padding: 0.5rem;
+          background: var(--greyText);
+          border-radius: 50%;
+          font-size: 2.5rem;
+
+          &:hover {
+            background: var(--blackColor);
+            color: var(--whiteColor);
+          }
+
+          .leftIcon {
+            background: var(--blackColor);
+            color: var(--whiteColor);
+
+            &:hover {
+              background: var(--greyText);
+              color: var(--blackColor);
+            }
+          }
+        }
+      }
+    }
+
+    .mainContent {
+      padding: 2rem 0;
+      gap: 1rem;
+
+      .singleDestination {
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+        position: relative;
+
+        .destImage {
+          height: 200px;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .overlayInfo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+            color: var(--whiteColor);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+            h3{
+              color: var(--whiteColor);
+              font-weight: 600;
+            }
+            p{
+              color: var(--whiteColor);
+              opacity: .7;
+              font-size: 13px;
+            }
+
+            .icon{
+              position: absolute;
+              background: var(--primaryColor);
+              right: 10px;
+              bottom: 10px;
+              padding: .5rem;
+              font-size: 2.5rem;
+              border-radius: 50%;
+              color: var(--whiteColor);
+              border: 1px solid transparent;
+              transition: .3s ease;
+
+              &:hover{
+                background: var(--blackColor);
+                border: 1px solid var(--primaryColor);
+                color: var(--primaryColor);
+              }
+            }
+
+            
+          }
+        }
+      }
+    }
+  }
+}
