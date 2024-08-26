@@ -6,6 +6,36 @@ import { BsDot } from "react-icons/bs";
 
 
 export function Popular(){
+    const Data = [
+        {
+            id: 1,
+            destTitle: 'Nairobi City',
+            imgSrc: 'nbo.jpg',
+            location: 'Kenya',
+            grade: 'CULTURAL RELAX',
+        },
+        {
+            id: 2,
+            destTitle: 'Barcelona',
+            imgSrc: 'barcelona.jpg',
+            location: 'Spain',
+            grade: 'Camp Nou',
+        },
+        {
+            id: 3,
+            destTitle: 'Golden Gate Bridge',
+            imgSrc: 'new-york.jpg',
+            location: 'USA',
+            grade: 'Golden Gate Bridge',
+        },
+        {
+            id: 4,
+            destTitle: 'Wembley Stadium',
+            imgSrc: 'London.jpg',
+            location: 'Englalnd',
+            grade: 'Wembley',
+        },
+    ]
     return (
         <>
         <section className="popular section container">
@@ -27,36 +57,41 @@ export function Popular(){
                 </div>
 
                 <div className="mainContent grid">
-                    <div className="singleDestination">
-                        <div className="destImage">
-                            <img src='images/London.jpg' alt="ImageTitle" />
+                    {Data.map((destination, index)=>(
+                        <div key={index} className="singleDestination">
+                            <div className="destImage">
+                                <img src={`images/${destination.imgSrc}`} alt="ImageTitle" />
 
-                            <div className="overlayInfo">
-                                <h3>Some Text</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+                                <div className="overlayInfo">
+                                    <h3>{destination.destTitle}</h3>
+                                    <p>
+                                        {destination.location}
+                                    </p>
 
-                                <BsArrowRightShort className='icon'/>
-                            </div>
-                        </div>
-
-                        <div className="destFooter">
-                            <div className="number">
-                                01
+                                    <BsArrowRightShort className='icon'/>
+                                </div>
                             </div>
 
-                            <div className="destText flex">
-                                <h6>London</h6>
-                                <span className="flex">
-                                    <span className="dot">
-                                        <BsDot className='icon'/>
+                            <div className="destFooter">
+                                <div className="number">
+                                    0{destination.id}
+                                </div>
+
+                                <div className="destText flex">
+                                    <h6>{destination.location}</h6>
+                                    <span className="flex">
+                                        <span className="dot">
+                                            <BsDot className='icon'/>
+                                        </span>
+                                        Dot
                                     </span>
-                                    Dot
-                                </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
+
+                    
+
                 </div>
             </div>
         </section>

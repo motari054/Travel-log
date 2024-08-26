@@ -1,5 +1,5 @@
 import './navbar.css'
-import { MdTravelExplore } from "react-icons/md";
+import { MdTravelExplore, MdWidthFull } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 import { useState } from 'react';
@@ -15,10 +15,22 @@ export function Navbar(){
         setActive('navBar')
     }
 
+    // ADDING BACKGROUND TO THE HEADER
+    const [transparent, setTransparent] = useState('header')
+    function addBg(){
+        if(window.scrollY >= 10){
+            setTransparent('header activeHeader')
+        }
+        else{
+            setTransparent('header')
+        }
+    }
+    window.addEventListener('scroll', addBg)
+
     return (
         <>
         <section className="navBarSection">
-            <div className="header">
+            <div className={transparent}>
                 <div className="logoDiv">
                     <a href="#" className='logo'>
                         <h1 className='flex'><MdTravelExplore className='icon' />TravelLog</h1>
