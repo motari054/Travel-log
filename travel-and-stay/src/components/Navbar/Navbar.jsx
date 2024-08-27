@@ -1,5 +1,5 @@
 import './navbar.css'
-import { MdTravelExplore, MdWidthFull } from "react-icons/md";
+import { MdTravelExplore } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 import { useState } from 'react';
