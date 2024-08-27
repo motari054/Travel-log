@@ -97,3 +97,39 @@ video{
 input{
     font-size: 100%;
 }
+
+/* MEDIA QUERIES */
+@media(min-width: 556px) {
+    .mainContent, .singlePost{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 884px){
+    .mainContent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container{
+        max-width: 80% !important;
+        margin: auto;
+    }
+}
+
+::selection{
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primaryColor);
+    border-radius: 10px;
+    cursor: pointer;
+}
