@@ -4,10 +4,10 @@ export function About(){
     return (
         <>
         <section className="about section">
-            <div className="secContaiter">
-                <div className="title">
+            <div className="secContainer">
+                <h2 className="title">
                     Why Hikings?
-                </div>
+                </h2>
 
                 <div className="mainContent containter grid">
                     <div className="singleItem">
@@ -41,6 +41,30 @@ export function About(){
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Totam, vero. Quisquam nulla eligendi odio sed!
                         </p>
+                    </div>
+                </div>
+
+                <div className="videoCard container">
+                    <div className="cardContent grid">
+
+                        <div className="cardText">
+                            <h2>
+                                Lorem ipsum, dolor sit amet consectetur 
+                                adipisicing elit. Saepe, natus?
+                            </h2>
+                            
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing 
+                                elit. Placeat numquam harum necessitatibus 
+                                cumque mollitia nesciunt in repellat a sunt d
+                                olor?
+                            </p>
+                        </div>
+
+                        <div className="cardVideo">
+                            <video src="video/video.mp4" autoPlay loop muted
+                            typeof='video/mp4'></video>
+                        </div>
                     </div>
                 </div>
             </div>
